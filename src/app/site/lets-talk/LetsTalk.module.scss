@@ -1,0 +1,165 @@
+@import '../../../assets/styles/variables.scss';
+
+.lets_talk {
+  padding-top: 40px;
+  padding-bottom: 25px;
+  background-color: $PRIMARY;
+
+  .content {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 64px;
+
+    .cto_image {
+      border-radius: 50%;
+      border: 1px solid $SECONDARY;
+      @media screen and (max-width: 425px) {
+        width: 110px;
+        height: 110px;
+      }
+    }
+    .cto_book_button {
+      padding: 8px 12px;
+      border-radius: 50px;
+      border: 1px solid $SECONDARY;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration-line: none;
+      z-index: 1;
+
+      &:hover {
+        color: $BLACK;
+        background-color: $SECONDARY;
+      }
+
+      @media screen and (max-width: 425px) {
+        font-size: 12px;
+      }
+    }
+
+    .text {
+      padding-top: unset;
+      font-size: 48px;
+      line-height: 66px;
+      text-align: center;
+      color: #ffffff;
+      white-space: pre-wrap;
+
+      @media screen and (max-width: 425px) {
+        font-size: 36px;
+        line-height: 48px;
+      }
+    }
+
+    .helper_text {
+      padding-top: unset;
+      // font-size: 18px;
+      // line-height: 33px;
+      // font-weight: 400;
+      color: #ffffff;
+      text-align: center;
+      max-width: 755px;
+    }
+
+    .icon {
+      max-width: 460px;
+    }
+  }
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+  padding-top: $HEADER_HEIGHT;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: $PRIMARY;
+  padding: 23px 0 120px;
+
+  .container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 44px;
+
+    form {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      column-gap: 30px;
+
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 360px;
+        width: 100%;
+        gap: 22px;
+
+        .input_wrapper {
+          height: 48px;
+        }
+      }
+      .right {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 22px;
+        max-width: 360px;
+        width: 100%;
+        textarea {
+          max-width: 360px;
+          width: 100%;
+          height: 118px;
+          padding: 16px 12px;
+          border-radius: 20px;
+          border: none;
+          outline: none;
+          font-weight: 400;
+          font-size: 16px;
+          color: $PRIMARY;
+          background-color: $WHITE;
+          resize: none;
+        }
+
+        label {
+          display: flex;
+          align-self: flex-end;
+          gap: 12px;
+          font-weight: 400;
+          font-size: 16px;
+          color: $WHITE;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .attachFile {
+          display: none;
+        }
+      }
+    }
+
+    button {
+      align-self: center;
+    }
+  }
+}

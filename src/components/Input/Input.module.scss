@@ -1,0 +1,37 @@
+@import '@/assets/styles/variables.scss';
+
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $WHITE;
+  max-width: 362px;
+  width: 100%;
+  padding: 6px 6px 6px 20px;
+  box-shadow: 0 0 15px rgb(57 71 90 / 18%);
+  max-height: 48px;
+  height: 100%;
+  border-radius: 30px;
+  gap: 12px;
+
+  input {
+    // all: unset;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: $PRIMARY;
+  }
+
+  .passwordIcon {
+    padding-right: 10px;
+  }
+}
+.error {
+  padding-top: 6px;
+  color: #ff3739;
+  font-size: 12px;
+  font-weight: 500;
+}

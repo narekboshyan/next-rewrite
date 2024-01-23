@@ -1,0 +1,309 @@
+@import '../../../assets/styles/variables.scss';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 250px;
+  padding-bottom: 132px;
+  background-color: #eaecef;
+  @media screen and (max-width: 1440px) {
+    gap: 200px;
+  }
+  @media screen and (max-width: 1360px) {
+    gap: 180px;
+  }
+  @media screen and (max-width: 1024px) {
+    gap: 150px;
+  }
+  @media screen and (max-width: $TABLET_MAX_WIDTH) {
+    gap: 120px;
+    padding-bottom: 70px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: center;
+    background-color: $WHITE;
+    height: 800px;
+    position: relative;
+
+    @media screen and (max-width: 1750px) {
+      height: 700px;
+    }
+
+    @media screen and (max-width: 1536px) {
+      height: 603px;
+    }
+    @media screen and (max-width: 1440px) {
+      height: 546px;
+    }
+    @media screen and (max-width: 1360px) {
+      height: 494px;
+    }
+
+    @media screen and (max-width: $TABLET_MAX_WIDTH) {
+      height: 100%;
+      padding-bottom: 32px;
+    }
+
+    .title {
+      padding-top: 60px;
+
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        padding-top: 33px;
+      }
+
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        white-space: unset;
+        padding-bottom: 22px;
+      }
+    }
+
+    .subtitle {
+      max-width: 640px;
+      @media screen and (max-width: 1360px) {
+        max-width: 413px;
+      }
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        max-width: 100%;
+      }
+    }
+
+    .image {
+      grid-area: image;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      max-width: 1100px;
+
+      @media screen and (max-width: 1750px) {
+        max-width: 890px;
+      }
+      @media screen and (max-width: 1536px) {
+        max-width: 806px;
+      }
+      @media screen and (max-width: 1440px) {
+        max-width: 729px;
+      }
+      @media screen and (max-width: 1360px) {
+        max-width: 543px;
+      }
+
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        position: relative;
+        max-width: calc(100% + 16px);
+        height: unset;
+      }
+    }
+  }
+
+  .our_culture {
+    display: grid;
+    grid-template-areas:
+      'image subtitle'
+      'image content';
+    // display: flex;
+    align-items: center;
+    column-gap: 84px;
+
+    @media screen and (max-width: 1536px) {
+      column-gap: 52px;
+    }
+
+    @media screen and (max-width: 1440px) {
+      column-gap: 48px;
+    }
+    @media screen and (max-width: 1360px) {
+      column-gap: 42px;
+    }
+
+    @media screen and (max-width: 1360px) {
+      column-gap: 37px;
+    }
+
+    @media screen and (max-width: $TABLET_MAX_WIDTH) {
+      display: grid;
+      grid-template-areas:
+        'subtitle'
+        'image'
+        'content';
+      gap: 21px;
+    }
+
+    .content {
+      grid-area: content;
+      display: flex;
+      flex-direction: column;
+      max-width: 640px;
+      width: 100%;
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        width: 100%;
+      }
+    }
+    .image_container {
+      position: relative;
+      grid-area: image;
+      max-width: 905px;
+      min-width: 500px;
+      width: 100%;
+      height: 525px;
+      box-shadow: 0px 0px 20px rgba(57, 71, 90, 0.3);
+      border-radius: 36px;
+      overflow: hidden;
+      transition: all 0.3 ease-in-out;
+
+      @media screen and (max-width: 1536px) {
+        height: 400px;
+        max-width: 736px;
+      }
+
+      @media screen and (max-width: 1360px) {
+        max-width: 664px;
+      }
+      @media screen and (max-width: 1024px) {
+        height: 335px;
+        max-width: 484px;
+        min-width: 0;
+      }
+
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        max-width: 100%;
+        height: 100%;
+        min-width: 0;
+        width: 100%;
+      }
+
+      &::after {
+        position: absolute;
+        content: url('../../../assets/icons/dots.svg?url');
+        svg: {
+          fill: '#ffffff';
+        }
+        top: 30px;
+        left: 30px;
+      }
+
+      .image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+  padding-top: $HEADER_HEIGHT;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: $PRIMARY;
+  padding: 161px 0 80px;
+  border-top-right-radius: 24px;
+  border-top-left-radius: 24px;
+
+  @media screen and (max-width: $TABLET_MAX_WIDTH) {
+    padding: 120px 0 80px;
+  }
+
+  .container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 44px;
+
+    p {
+      font-weight: 500;
+      font-size: 72px;
+      line-height: 77px;
+      color: #ffffff;
+      text-align: center;
+
+      @media screen and (max-width: 1536px) {
+        font-size: 48px;
+        line-height: 54px;
+      }
+
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+    form {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      column-gap: 30px;
+
+      @media screen and (max-width: $TABLET_MAX_WIDTH) {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 360px;
+        width: 100%;
+        gap: 22px;
+
+        .input_wrapper {
+          height: 48px;
+        }
+      }
+      .right {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 22px;
+        max-width: 360px;
+        width: 100%;
+        textarea {
+          max-width: 360px;
+          width: 100%;
+          height: 118px;
+          padding: 16px 12px;
+          border-radius: 20px;
+          border: none;
+          outline: none;
+          font-weight: 400;
+          font-size: 16px;
+          color: $PRIMARY;
+          background-color: $WHITE;
+          resize: none;
+        }
+
+        label {
+          display: flex;
+          align-self: flex-end;
+          gap: 12px;
+          font-weight: 400;
+          font-size: 16px;
+          color: $WHITE;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .attachFile {
+          display: none;
+        }
+      }
+    }
+
+    button {
+      align-self: center;
+    }
+  }
+}

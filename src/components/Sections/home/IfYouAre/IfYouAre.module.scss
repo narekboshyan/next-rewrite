@@ -1,0 +1,162 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.if_you_are {
+  margin-top: 300px;
+
+  &_title {
+    margin-bottom: 75px;
+    color: $WHITE;
+    font-size: 90px;
+    line-height: unset;
+  }
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    &_item {
+      display: flex;
+      flex-direction: column;
+      width: calc(33% - 35px);
+      justify-content: space-between;
+
+      img {
+        width: 100%;
+        height: 454px;
+      }
+
+      p {
+        color: $WHITE;
+        font-size: 32px;
+        margin-bottom: 32px;
+        line-height: 46px;
+        padding-top: unset;
+
+        span {
+          font-size: 40px;
+          color: #ffcf55;
+        }
+      }
+    }
+  }
+}
+
+// ------------- meida -------------
+
+@include lg {
+  .if_you_are {
+    margin-top: 250px;
+
+    &_title {
+      margin-bottom: 56px;
+      color: $WHITE;
+      font-size: 64px;
+    }
+
+    &_list {
+      gap: 50px;
+
+      &_item {
+        width: calc(33% - 30px);
+
+        img {
+          height: 340px;
+          border-radius: 30px;
+        }
+
+        p {
+          color: $WHITE;
+          font-size: 26px;
+          margin-bottom: 24px;
+          line-height: 35px;
+
+          span {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include xxs {
+  .if_you_are {
+    margin-top: 150px;
+
+    &_title {
+      margin-bottom: 56px;
+      font-size: 32px;
+    }
+
+    &_list {
+      gap: 50px;
+
+      &_item {
+        width: calc(33% - 32px);
+
+        img {
+          height: 245px;
+          border-radius: 30px;
+        }
+
+        p {
+          font-size: 20px;
+          margin-bottom: 24px;
+          line-height: 30px;
+
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .if_you_are {
+    margin-top: 124px;
+
+    &_title {
+      margin-bottom: 26px;
+    }
+
+    &_list {
+      gap: 36px;
+
+      &_item {
+        width: calc(33% - 32px);
+
+        img {
+          height: 210px;
+        }
+
+        p {
+          font-size: 18px;
+          margin-bottom: 18px;
+          line-height: 21px;
+
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media($MOBILE_MAX_WIDTH) {
+  .if_you_are {
+    &_list {
+      &_item {
+        width: 100%;
+
+        img {
+          height: 284px;
+        }
+      }
+    }
+  }
+}

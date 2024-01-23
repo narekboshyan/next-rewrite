@@ -1,0 +1,73 @@
+@import '@/assets/styles/variables.scss';
+
+.blogs {
+  display: flex;
+  flex-direction: column;
+  padding-top: 45px;
+  padding-bottom: 90px;
+  gap: 80px;
+
+  .floating_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 64px;
+    bottom: 64px;
+    background-color: $SECONDARY;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+  }
+
+  .table_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &_image {
+      border-radius: 4px;
+    }
+
+    &_title {
+      padding: 0 98px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+      color: $PRIMARY;
+    }
+
+    &_status {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      padding: 0 98px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 25px;
+    }
+    .published {
+      color: #3d7a3f;
+    }
+    .unpublished {
+      color: red;
+    }
+
+    &_icon {
+      cursor: pointer;
+      padding: 0 98px;
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .divider {
+    height: 40px;
+    width: 1px;
+    background-color: rgba(11, 27, 50, 0.2);
+  }
+}

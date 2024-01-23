@@ -1,0 +1,132 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.testimonial_card {
+  background: #364a5a52;
+  width: calc(50% - 10px);
+  padding: 40px;
+  display: flex;
+
+  &_reviewer_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 33px;
+  }
+
+  &_texts {
+    &_reviewer {
+      display: flex;
+      justify-content: space-between;
+
+      & > img {
+        width: 114px;
+        height: 64px;
+      }
+
+      &_info {
+        div {
+          display: flex;
+          align-items: center;
+
+          h3 {
+            color: #ffffffe0;
+            margin-right: 12px;
+            padding-top: unset;
+          }
+
+          img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+          }
+        }
+
+        p {
+          color: #ffffff7a;
+          line-height: unset;
+        }
+      }
+    }
+
+    &_review {
+      margin-top: 13px;
+      color: #ffffffa3;
+    }
+  }
+}
+
+// ------------- meida -------------
+
+@include md {
+  .testimonial_card {
+    padding: 30px;
+
+    &_reviewer_img {
+      width: 72px;
+      height: 72px;
+      margin-right: 22px;
+    }
+
+    &_texts {
+      &_reviewer {
+        & > img {
+          width: 83px;
+          height: 46px;
+        }
+
+        &_info {
+          div {
+            img {
+              width: 26px;
+              height: 26px;
+            }
+          }
+        }
+      }
+
+      &_review {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@include media($TABLET_MAX_WIDTH) {
+  .testimonial_card {
+    width: 100%;
+    padding: 22px 22px 80px 22px;
+    position: relative;
+
+    &_reviewer_img {
+      margin-right: 15px;
+    }
+
+    &_texts {
+      &_reviewer {
+        & > img {
+          width: 69px;
+          height: 38px;
+          position: absolute;
+          bottom: 22px;
+          right: 22px;
+        }
+
+        &_info {
+          div {
+            img {
+              width: 29px;
+              height: 29px;
+            }
+          }
+        }
+      }
+
+      &_review {
+        margin-top: 13px;
+        color: #ffffffa3;
+        margin-left: -85px;
+      }
+    }
+  }
+}

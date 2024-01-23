@@ -1,0 +1,59 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.testimonials {
+  margin-top: 200px;
+
+  &_title {
+    color: $WHITE;
+    font-size: 90px;
+    line-height: unset;
+    margin-bottom: 54px;
+  }
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &_view_more {
+    color: #fcd358;
+    margin-top: 25px;
+    margin-left: auto;
+    padding-top: unset;
+    line-height: unset;
+    display: block;
+    width: fit-content;
+  }
+}
+
+// ------------- meida -------------
+
+@include lg {
+  .testimonials {
+    margin-top: 120px;
+
+    &_title {
+      margin-bottom: 42px;
+      font-size: 62px;
+    }
+  }
+}
+
+@include media($TABLET_MAX_WIDTH) {
+  .testimonials {
+    &_title {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@include media($MOBILE_MAX_WIDTH) {
+  .testimonials {
+    &_title {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+  }
+}

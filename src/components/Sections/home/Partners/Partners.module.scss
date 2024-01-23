@@ -1,0 +1,108 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.partners {
+  margin-top: 300px;
+  position: relative;
+
+  &_title {
+    color: $WHITE;
+    font-size: 90px;
+    line-height: 144px;
+  }
+
+  &_map_img_wrapper {
+    width: 100%;
+
+    &_image {
+      width: 60%;
+      height: auto;
+      object-fit: contain;
+      max-height: 70px;
+    }
+  }
+
+  &_images {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 210px;
+    left: 0;
+    width: 100%;
+
+    &_item {
+      height: 136px;
+      border-radius: 40px;
+      background-color: $WHITE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        object-fit: contain;
+        width: 55%;
+        max-height: 80px;
+        height: auto;
+      }
+    }
+  }
+}
+
+// ------------- meida -------------
+
+@include lg {
+  .partners {
+    margin-top: 180px;
+
+    &_title {
+      font-size: 62px;
+      line-height: 99px;
+    }
+
+    &_map_img_wrapper {
+      padding: 0 55px;
+    }
+
+    &_images {
+      bottom: 70px;
+
+      &_item {
+        height: 100px;
+        border-radius: 30px;
+
+        img {
+          max-height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@include media($TABLET_MAX_WIDTH) {
+  .partners {
+    margin-top: 160px;
+
+    &_title {
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    &_map_img_wrapper {
+      padding: 0;
+    }
+
+    &_images {
+      bottom: 0;
+
+      &_item {
+        height: 72px;
+        border-radius: 20px;
+
+        img {
+          width: 80%;
+          max-height: 50px;
+        }
+      }
+    }
+  }
+}

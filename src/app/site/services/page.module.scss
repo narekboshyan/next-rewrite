@@ -1,0 +1,29 @@
+@import "src/assets/styles/mixins";
+.page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  .container{
+    padding: 127px;
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    @include lg {
+      padding: 47px;
+      gap: 160px;
+    }
+    @include md {
+      gap: 140px;
+    }
+    @include sm {
+      gap: 100px;
+    }
+    @include xs {
+      gap: 70px;
+    }
+    @include media(600px){
+      padding: 20px;
+      gap: 40px;
+    }
+  }
+}

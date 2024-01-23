@@ -1,0 +1,43 @@
+@import '../../assets/styles/variables.scss';
+
+.button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: $BLACK;
+  max-height: 42px;
+  background-color: $SECONDARY;
+  flex-shrink: 0;
+
+  &:hover {
+    box-shadow: 0 0 30px rgb(0 37 90 / 30%);
+  }
+
+  cursor: pointer;
+
+  //   &_positive {
+  //     border: 1px solid $BUTTON_POSITIVE_BACKGROUND;
+  //     background-color: $BUTTON_POSITIVE_BACKGROUND;
+  //     &:hover {
+  //       opacity: 0.8;
+  //     }
+  //   }
+
+  //   &_negative {
+  //     border: 1px solid #ee3032;
+
+  //     background-color: $BUTTON_NEGATIVE_BACKGROUND;
+  //     &:hover {
+  //       background-color: $BUTTON_POSITIVE_BACKGROUND;
+  //     }
+  //   }
+}

@@ -1,0 +1,125 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.about {
+  display: flex;
+  position: relative;
+  margin-top: 280px;
+
+  h2 {
+    font-size: 124px;
+    line-height: unset;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 44px;
+    padding-top: unset;
+    line-height: 72px;
+  }
+
+  &_left {
+    background-color: $DARK_PRIMARY;
+    padding: 200px 80px 120px 0;
+    width: 50%;
+
+    h2,
+    p {
+      color: $WHITE;
+    }
+  }
+
+  &_right {
+    background-color: $WHITE;
+    padding: 200px 80px 120px;
+    width: calc(50% + 48px);
+    position: absolute;
+    right: -48px;
+    top: 0;
+    height: 100%;
+
+    h2,
+    p {
+      color: $DARK_PRIMARY;
+    }
+  }
+}
+
+// ------------- meida -------------
+
+@include lg {
+  .about {
+    margin-top: 145px;
+
+    h2 {
+      font-size: 92px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 32px;
+      line-height: 53px;
+    }
+
+    &_left {
+      padding: 164px 65px 68px 0;
+    }
+
+    &_right {
+      padding: 164px 65px 68px;
+    }
+  }
+}
+
+@include xxs {
+  .about {
+    margin-top: 100px;
+
+    h2 {
+      font-size: 70px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    &_left {
+      padding: 100px 48px 68px 0;
+    }
+
+    &_right {
+      padding: 100px 48px 68px;
+    }
+  }
+}
+
+@include media($TABLET_MAX_WIDTH) {
+  .about {
+    margin-top: 100px;
+    flex-direction: column;
+
+    h2 {
+      font-size: 48px;
+      margin-bottom: 22px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 36px;
+    }
+
+    &_left {
+      padding: 0 0 50px;
+      width: 100%;
+    }
+
+    &_right {
+      position: unset;
+      padding: 80px 17px 50px;
+      margin-left: -17px;
+      width: calc(100% + 34px);
+    }
+  }
+}

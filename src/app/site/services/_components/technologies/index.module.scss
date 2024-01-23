@@ -1,0 +1,128 @@
+@import "src/assets/styles/mixins";
+
+.wrapper {
+  width: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 40px;
+
+    h2 {
+      text-align: center;
+      @include tablet {
+        text-align: left;
+      }
+    }
+
+    h3 {
+      font-size: 44px;
+      margin-bottom: 13px;
+      @include lg {
+        font-size: 40px;
+      }
+      @include xs {
+        font-size: 30px;
+      }
+      @include tablet {
+        font-size: 26px;
+      }
+    }
+
+    .article {
+      position: relative;
+      text-align: left;
+      height: calc(100vw - 100vw / 1.4);
+      //@include md{
+      //  height: calc(100vw - 100vw/1.5);
+      //}
+      @include sm {
+        height: calc(100vw - 100vw / 1.5);
+      }
+      @include xs {
+        height: max-content;
+      }
+
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .img {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+        height: auto;
+        margin-top: 14px;
+        @include tablet {
+          width: 100%;
+        }
+      }
+
+      span {
+        position: relative;
+        z-index: 1;
+        max-width: 63%;
+        display: inline-block;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 153.4%;
+        @include md {
+          max-width: 60%;
+        }
+        @include xs {
+          font-size: 18px;
+        }
+        @include tablet {
+          max-width: 100%;
+        }
+      }
+
+      .bg {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        z-index: 0;
+        width: 42%;
+        height: auto;
+        @include lg {
+          top: 70px;
+        }
+        @include tablet {
+          position: static;
+          width: 100%;
+        }
+      }
+    }
+
+    .right {
+      text-align: right;
+      @include tablet {
+        text-align: left;
+      }
+
+      .bg {
+        left: 0;
+        right: auto;
+      }
+    }
+
+    .bottom {
+      span {
+        max-width: 75%;
+        @include md {
+          max-width: 63%;
+        }
+        @include md {
+          max-width: 57%;
+        }
+        @include tablet {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

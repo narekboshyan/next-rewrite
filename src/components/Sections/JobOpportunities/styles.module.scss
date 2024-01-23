@@ -1,0 +1,48 @@
+@import '../../../assets/styles/variables.scss';
+
+.jobs {
+  &_carousel {
+    padding: 44px 0;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media screen and (max-width: $MOBILE_MAX_WIDTH) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_item {
+      width: 344px;
+
+      height: 224px;
+      border-radius: 20px;
+      background-color: $WHITE;
+      box-shadow: 0 0 20px #dedddd;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      h3 {
+        font-size: 28px;
+        text-align: center;
+      }
+
+      @media screen and (max-width: $MOBILE_MAX_WIDTH) {
+        width: unset;
+        max-width: 386px;
+        width: 100%;
+      }
+    }
+  }
+}

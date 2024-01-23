@@ -1,0 +1,101 @@
+@import '../../../assets/styles/variables.scss';
+@import 'src/assets/styles/mixins';
+
+.hiring_process {
+  display: flex;
+  border-radius: 30px;
+  background-color: $PRIMARY;
+  padding: 160px 0px 55px;
+  position: relative;
+
+  .dots {
+    position: absolute;
+    left: 30;
+    top: 30px;
+  }
+
+  h2 {
+    color: $WHITE;
+  }
+  h3 {
+    color: $WHITE;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 93px 0px 46px;
+  }
+
+  .hiring {
+    position: relative;
+    width: 100%;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 44px;
+    }
+
+    &_info {
+      align-self: flex-start;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      max-width: 913px;
+
+      @include lg {
+        max-width: 728px;
+      }
+
+      @include md {
+        max-width: 677px;
+      }
+
+      @include sm {
+        max-width: 640px;
+      }
+
+      @include xs {
+        max-width: 544px;
+        position: relative;
+      }
+    }
+  }
+}
+
+@include lg {
+  .hiring_process {
+    h2 {
+      font-size: 54px;
+    }
+    h3 {
+      font-size: 28px;
+      line-height: 42px;
+    }
+  }
+}
+
+@include md {
+  .hiring_process {
+    h2 {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 24px;
+      line-height: 37px;
+    }
+  }
+}
+
+@include xs {
+  .hiring_process {
+    h2 {
+      font-size: 30px;
+    }
+    h3 {
+      color: $WHITE;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
